@@ -1,0 +1,9 @@
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CopyComplete
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

@@ -1,0 +1,6 @@
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\bin\Debug\Dominio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\obj\Debug\Dominio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Dominio\obj\Debug\Dominio.pdb

@@ -1,0 +1,27 @@
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.exe.config
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.exe
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.pdb
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.AssemblyReference.cache
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.adminArticulos.resources
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.AgregarArticulo.resources
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.exe
+C:\Users\Usuario\Source\Repos\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.AssemblyReference.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.adminArticulos.resources
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.AgregarArticulo.resources
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.Properties.Resources.resources
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.GenerateResource.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.exe
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.exe.config
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.exe
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Gestión de artículos app.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Dominio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\LogicaNegocio.dll
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Dominio.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\LogicaNegocio.pdb
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.CopyComplete
