@@ -178,7 +178,10 @@ namespace LogicaNegocio
                     auxiliar.Codigo = (string)datos.Lector["Codigo"];
                     auxiliar.Nombre = (string)datos.Lector["Nombre"];
                     auxiliar.Descripcion = (string)datos.Lector["Descripcion"];
-                    auxiliar.UrlImg = (string)datos.Lector["ImagenUrl"];
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        auxiliar.UrlImg = (string)datos.Lector["ImagenUrl"];
+
                     auxiliar.Precio = (decimal)datos.Lector["Precio"];
 
                     auxiliar.Marca = new Caracteristica();

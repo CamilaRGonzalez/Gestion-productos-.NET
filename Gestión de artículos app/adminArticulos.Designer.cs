@@ -42,21 +42,26 @@ namespace Gestión_de_artículos_app
             this.lbFiltro = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
+            this.dgvArticulos.Location = new System.Drawing.Point(282, 12);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(614, 289);
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.Size = new System.Drawing.Size(512, 289);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(645, 12);
+            this.btnAgregar.Location = new System.Drawing.Point(809, 12);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(103, 30);
             this.btnAgregar.TabIndex = 1;
@@ -66,7 +71,7 @@ namespace Gestión_de_artículos_app
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(645, 48);
+            this.btnEditar.Location = new System.Drawing.Point(809, 48);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 30);
             this.btnEditar.TabIndex = 2;
@@ -76,7 +81,7 @@ namespace Gestión_de_artículos_app
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(645, 84);
+            this.btnEliminar.Location = new System.Drawing.Point(809, 84);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 30);
             this.btnEliminar.TabIndex = 3;
@@ -86,18 +91,19 @@ namespace Gestión_de_artículos_app
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(12, 307);
+            this.btnDetalle.Location = new System.Drawing.Point(5, 306);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(103, 30);
             this.btnDetalle.TabIndex = 4;
             this.btnDetalle.Text = "Ver detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // lbFiltrar
             // 
             this.lbFiltrar.AutoSize = true;
             this.lbFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFiltrar.Location = new System.Drawing.Point(646, 124);
+            this.lbFiltrar.Location = new System.Drawing.Point(810, 124);
             this.lbFiltrar.Name = "lbFiltrar";
             this.lbFiltrar.Size = new System.Drawing.Size(110, 15);
             this.lbFiltrar.TabIndex = 5;
@@ -107,7 +113,7 @@ namespace Gestión_de_artículos_app
             // 
             this.cbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(653, 167);
+            this.cbCampo.Location = new System.Drawing.Point(817, 167);
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 21);
             this.cbCampo.TabIndex = 6;
@@ -116,7 +122,7 @@ namespace Gestión_de_artículos_app
             // 
             this.lbCampo.AutoSize = true;
             this.lbCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCampo.Location = new System.Drawing.Point(650, 151);
+            this.lbCampo.Location = new System.Drawing.Point(814, 151);
             this.lbCampo.Name = "lbCampo";
             this.lbCampo.Size = new System.Drawing.Size(45, 13);
             this.lbCampo.TabIndex = 7;
@@ -126,7 +132,7 @@ namespace Gestión_de_artículos_app
             // 
             this.lbCriterio.AutoSize = true;
             this.lbCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCriterio.Location = new System.Drawing.Point(650, 191);
+            this.lbCriterio.Location = new System.Drawing.Point(814, 191);
             this.lbCriterio.Name = "lbCriterio";
             this.lbCriterio.Size = new System.Drawing.Size(54, 15);
             this.lbCriterio.TabIndex = 8;
@@ -136,7 +142,7 @@ namespace Gestión_de_artículos_app
             // 
             this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(653, 209);
+            this.cbCriterio.Location = new System.Drawing.Point(817, 209);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbCriterio.TabIndex = 9;
@@ -145,7 +151,7 @@ namespace Gestión_de_artículos_app
             // 
             this.lbFiltro.AutoSize = true;
             this.lbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFiltro.Location = new System.Drawing.Point(650, 233);
+            this.lbFiltro.Location = new System.Drawing.Point(814, 233);
             this.lbFiltro.Name = "lbFiltro";
             this.lbFiltro.Size = new System.Drawing.Size(40, 15);
             this.lbFiltro.TabIndex = 10;
@@ -153,25 +159,35 @@ namespace Gestión_de_artículos_app
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(654, 251);
+            this.txtFiltro.Location = new System.Drawing.Point(818, 251);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(120, 20);
             this.txtFiltro.TabIndex = 11;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(653, 277);
+            this.btnBuscar.Location = new System.Drawing.Point(817, 277);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(67, 22);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // pbxImagen
+            // 
+            this.pbxImagen.Location = new System.Drawing.Point(5, 12);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(271, 288);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagen.TabIndex = 13;
+            this.pbxImagen.TabStop = false;
+            // 
             // adminArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 360);
+            this.ClientSize = new System.Drawing.Size(960, 350);
+            this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.lbFiltro);
@@ -189,6 +205,7 @@ namespace Gestión_de_artículos_app
             this.Text = "Administrar artículos";
             this.Load += new System.EventHandler(this.adminArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,6 +226,7 @@ namespace Gestión_de_artículos_app
         private System.Windows.Forms.Label lbFiltro;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.PictureBox pbxImagen;
     }
 }
 

@@ -82,11 +82,18 @@ namespace LogicaNegocio
 
         public bool txtCompletos(TextBox[] campos,Label[] label)
         {
+            bool campo = true;
             bool camposCompletos = true;
 
             for (int i = 0; i < campos.Length; i++)
             {
-                camposCompletos = campoCompleto(campos[i],label[i]);
+                if(i != 3)
+                {
+                    campo = campoCompleto(campos[i], label[i]);
+                    if (!campo)
+                        camposCompletos = campo;
+                }
+                    
             }
 
             return camposCompletos;

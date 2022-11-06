@@ -24,6 +24,11 @@ namespace Gestión_de_artículos_app
             funcion = new FuncionesFront();
         }
 
+        public Articulo Art() //getter
+        {
+            return art; 
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             AgregarArticulo agregarVentana = new AgregarArticulo();
@@ -75,6 +80,26 @@ namespace Gestión_de_artículos_app
             AgregarArticulo agregarVentana = new AgregarArticulo(art);
             agregarVentana.ShowDialog();
             funcion.cargarArticulos(dgvArticulos);
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo seleccion = new Articulo();
+            if(dgvArticulos.CurrentRow != null)
+            {
+                seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                funcion.CargarImagen(seleccion.UrlImg, pbxImagen);
+            }
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            art = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            
+            Ver_detalle detalle = new Ver_detalle(art);
+            detalle.ShowDialog();
+           
+                 
         }
     }
 }

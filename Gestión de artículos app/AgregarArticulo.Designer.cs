@@ -46,12 +46,12 @@ namespace Gestión_de_artículos_app
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.brnAgregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.warningCodigo = new System.Windows.Forms.Label();
-            this.warningNombre = new System.Windows.Forms.Label();
-            this.warningPrecio = new System.Windows.Forms.Label();
-            this.warningImagen = new System.Windows.Forms.Label();
             this.warningDesc = new System.Windows.Forms.Label();
+            this.warningImagen = new System.Windows.Forms.Label();
+            this.warningPrecio = new System.Windows.Forms.Label();
+            this.warningNombre = new System.Windows.Forms.Label();
+            this.warningCodigo = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,9 +60,11 @@ namespace Gestión_de_artículos_app
             // 
             // pbxImagen
             // 
+            this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxImagen.Location = new System.Drawing.Point(6, 19);
             this.pbxImagen.Name = "pbxImagen";
             this.pbxImagen.Size = new System.Drawing.Size(257, 249);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 
@@ -159,6 +161,7 @@ namespace Gestión_de_artículos_app
             this.txtUrlImg.Name = "txtUrlImg";
             this.txtUrlImg.Size = new System.Drawing.Size(135, 20);
             this.txtUrlImg.TabIndex = 5;
+            this.txtUrlImg.Leave += new System.EventHandler(this.txtUrlImg_Leave);
             // 
             // txtDescripcion
             // 
@@ -171,6 +174,7 @@ namespace Gestión_de_artículos_app
             // 
             // cbMarca
             // 
+            this.cbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarca.FormattingEnabled = true;
             this.cbMarca.Location = new System.Drawing.Point(76, 174);
             this.cbMarca.Name = "cbMarca";
@@ -179,6 +183,7 @@ namespace Gestión_de_artículos_app
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
             this.cbCategoria.Location = new System.Drawing.Point(76, 214);
             this.cbCategoria.Name = "cbCategoria";
@@ -223,15 +228,42 @@ namespace Gestión_de_artículos_app
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del artículo";
             // 
-            // groupBox2
+            // warningDesc
             // 
-            this.groupBox2.Controls.Add(this.pbxImagen);
-            this.groupBox2.Location = new System.Drawing.Point(413, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 280);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Imagen";
+            this.warningDesc.AutoSize = true;
+            this.warningDesc.ForeColor = System.Drawing.Color.Red;
+            this.warningDesc.Location = new System.Drawing.Point(298, 258);
+            this.warningDesc.Name = "warningDesc";
+            this.warningDesc.Size = new System.Drawing.Size(0, 13);
+            this.warningDesc.TabIndex = 12;
+            // 
+            // warningImagen
+            // 
+            this.warningImagen.AutoSize = true;
+            this.warningImagen.ForeColor = System.Drawing.Color.Red;
+            this.warningImagen.Location = new System.Drawing.Point(227, 136);
+            this.warningImagen.Name = "warningImagen";
+            this.warningImagen.Size = new System.Drawing.Size(0, 13);
+            this.warningImagen.TabIndex = 11;
+            // 
+            // warningPrecio
+            // 
+            this.warningPrecio.AutoSize = true;
+            this.warningPrecio.ForeColor = System.Drawing.Color.Red;
+            this.warningPrecio.Location = new System.Drawing.Point(219, 99);
+            this.warningPrecio.Name = "warningPrecio";
+            this.warningPrecio.Size = new System.Drawing.Size(7, 13);
+            this.warningPrecio.TabIndex = 10;
+            this.warningPrecio.Text = "\r\n";
+            // 
+            // warningNombre
+            // 
+            this.warningNombre.AutoSize = true;
+            this.warningNombre.ForeColor = System.Drawing.Color.Red;
+            this.warningNombre.Location = new System.Drawing.Point(217, 64);
+            this.warningNombre.Name = "warningNombre";
+            this.warningNombre.Size = new System.Drawing.Size(0, 13);
+            this.warningNombre.TabIndex = 9;
             // 
             // warningCodigo
             // 
@@ -244,42 +276,15 @@ namespace Gestión_de_artículos_app
             this.warningCodigo.TabIndex = 8;
             this.warningCodigo.Text = "\r\n";
             // 
-            // warningNombre
+            // groupBox2
             // 
-            this.warningNombre.AutoSize = true;
-            this.warningNombre.ForeColor = System.Drawing.Color.Red;
-            this.warningNombre.Location = new System.Drawing.Point(217, 64);
-            this.warningNombre.Name = "warningNombre";
-            this.warningNombre.Size = new System.Drawing.Size(0, 13);
-            this.warningNombre.TabIndex = 9;
-            // 
-            // warningPrecio
-            // 
-            this.warningPrecio.AutoSize = true;
-            this.warningPrecio.ForeColor = System.Drawing.Color.Red;
-            this.warningPrecio.Location = new System.Drawing.Point(219, 99);
-            this.warningPrecio.Name = "warningPrecio";
-            this.warningPrecio.Size = new System.Drawing.Size(7, 13);
-            this.warningPrecio.TabIndex = 10;
-            this.warningPrecio.Text = "\r\n";
-            // 
-            // warningImagen
-            // 
-            this.warningImagen.AutoSize = true;
-            this.warningImagen.ForeColor = System.Drawing.Color.Red;
-            this.warningImagen.Location = new System.Drawing.Point(227, 136);
-            this.warningImagen.Name = "warningImagen";
-            this.warningImagen.Size = new System.Drawing.Size(0, 13);
-            this.warningImagen.TabIndex = 11;
-            // 
-            // warningDesc
-            // 
-            this.warningDesc.AutoSize = true;
-            this.warningDesc.ForeColor = System.Drawing.Color.Red;
-            this.warningDesc.Location = new System.Drawing.Point(298, 258);
-            this.warningDesc.Name = "warningDesc";
-            this.warningDesc.Size = new System.Drawing.Size(0, 13);
-            this.warningDesc.TabIndex = 12;
+            this.groupBox2.Controls.Add(this.pbxImagen);
+            this.groupBox2.Location = new System.Drawing.Point(413, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(269, 280);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Imagen";
             // 
             // button1
             // 

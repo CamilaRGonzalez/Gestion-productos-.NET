@@ -51,5 +51,28 @@ namespace LogicaNegocio
             grilla.Columns["Id"].Visible = false;
 
         }
+
+        public void CargarImagen(string url, PictureBox cajaImagen)
+        {
+            try
+            {
+                cajaImagen.Load(url);
+            }
+            catch (Exception)
+            {
+                cajaImagen.Load("https://programacion.net/files/article/20161110041116_image-not-found.png");
+            }
+        }
+
+        public void llenarLabels(Articulo art, Label[] labels)
+        {
+            labels[0].Text = art.Codigo;
+            labels[1].Text = art.Nombre;
+            labels[2].Text = art.Precio.ToString();
+            labels[3].Text = art.UrlImg;
+            labels[4].Text = art.Marca.Descripcion;
+           labels[5].Text = art.Categoria.Descripcion;
+           labels[6].Text = art.Descripcion;
+        }
     }
 }

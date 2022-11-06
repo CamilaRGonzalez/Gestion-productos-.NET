@@ -25,3 +25,4 @@ C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de
 C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\Dominio.pdb
 C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\bin\Debug\LogicaNegocio.pdb
 C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión de artículos app.csproj.CopyComplete
+C:\Users\Usuario\Music\TP FINAL NIVEL2\TPFinalNivel2_Gonzalez_Camila\Gestión de artículos app\obj\Debug\Gestión_de_artículos_app.Ver_detalle.resources

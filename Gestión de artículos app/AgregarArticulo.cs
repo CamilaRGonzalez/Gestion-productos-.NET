@@ -62,6 +62,7 @@ namespace Gestión_de_artículos_app
                 if(articulo != null)
                 {
                     funcion.llenarCampos(articulo, campos, combx);
+                    funcion.CargarImagen(txtUrlImg.Text, pbxImagen);
                 }
 
             }
@@ -142,6 +143,12 @@ namespace Gestión_de_artículos_app
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUrlImg_Leave(object sender, EventArgs e)
+        {
+            if (articulo == null)
+                funcion.CargarImagen(txtUrlImg.Text, pbxImagen);
         }
     }
 }
