@@ -28,7 +28,7 @@ namespace Gestión_de_artículos_app
             validacion = new Validaciones();
             funcion = new FuncionesFront();
             campos = new TextBox[] { txtCodigo, txtNombre, txtPrecio, txtUrlImg, txtDescripcion };
-            label = new Label[] { warningCodigo, warningNombre, warningPrecio, warningImagen, warningDesc };
+            label = new Label[] { warningCodigo, warningNombre, warningPrecio,warningImagen,warningDesc };
             combx = new ComboBox[] { cbMarca, cbCategoria };
         }
 

@@ -52,6 +52,14 @@ namespace LogicaNegocio
 
         }
 
+        public void cargarArticulosFiltrados(DataGridView grilla, List<Articulo> listaArt)
+        {
+            grilla.DataSource = listaArt;
+            grilla.Columns["UrlImg"].Visible = false;
+            grilla.Columns["Id"].Visible = false;
+
+        }
+
         public void CargarImagen(string url, PictureBox cajaImagen)
         {
             try

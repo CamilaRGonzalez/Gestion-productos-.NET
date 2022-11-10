@@ -48,6 +48,12 @@ namespace Gestión_de_artículos_app
 
                 MessageBox.Show(ex.ToString());
             }
+
+            cbCampo.Items.Add("Código");
+            cbCampo.Items.Add("Nombre");
+            cbCampo.Items.Add("Precio");
+            cbCampo.Items.Add("Marca");
+            cbCampo.Items.Add("Categoría");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -100,6 +106,134 @@ namespace Gestión_de_artículos_app
             detalle.ShowDialog();
            
                  
+        }
+
+        private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string elegido = cbCampo.SelectedItem.ToString();
+            CaracteristicaDB datos = new CaracteristicaDB();
+            string[] criterios;
+
+            if (elegido == "Marca" || elegido == "Categoría")
+            {
+                cbCriterio.Enabled = true;
+                txtFiltro.Enabled = false;
+                warning.Text = "";
+                txtFiltro.Text = "";
+                try
+                {
+                    if (elegido == "Marca")
+                        cbCriterio.DataSource = datos.ListarMarcas();
+                    else
+                        cbCriterio.DataSource = datos.ListarCategorias();
+
+                    cbCriterio.ValueMember = "Id";
+                    cbCriterio.DisplayMember = "Descripcion";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            else if(elegido == "Precio")
+            {
+                criterios = new string[] { "Mayor a", "Menor a", "Igual a" };
+                txtFiltro.Enabled = true;
+                cbCriterio.Enabled = true;
+                cbCriterio.DataSource = criterios;
+                warning.Text = "";
+                txtFiltro.Text = "";
+            }
+            else 
+            {
+                txtFiltro.Text = "";
+                cbCriterio.DataSource = null;
+                cbCriterio.Enabled = false;
+                txtFiltro.Enabled = true;
+                warning.Text = "";
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string elegido = cbCampo.SelectedItem.ToString();
+            baseDatos = new ArticuloDB();
+            List<Articulo> lista;
+            Validaciones validacion = new Validaciones();
+            char operador;
+
+            try
+            {
+                switch (elegido)
+                {
+                    case "Código":
+                        if (txtFiltro.Text != "")
+                        {
+                            warning.Text = "";
+                            lista = baseDatos.FiltrarFrase(txtFiltro.Text, "A.Codigo");
+                            funcion.cargarArticulosFiltrados(dgvArticulos, lista);
+                        }
+                        else
+                        {
+                            warning.Text = "*Campo obligatorio";
+                        }
+                        break;
+                    case "Nombre":
+                        if (txtFiltro.Text != "")
+                        {
+                            warning.Text = "";
+                            lista = baseDatos.FiltrarFrase(txtFiltro.Text, "A.Nombre");
+                            funcion.cargarArticulosFiltrados(dgvArticulos, lista);
+                        }
+                        else
+                        {
+                            warning.Text = "*Campo obligatorio";
+                        }
+                        break;
+                    case "Precio":
+                        if (txtFiltro.Text != "")
+                        {
+                            warning.Text = "";
+                            if (!validacion.esDecimal(txtFiltro.Text))
+                                warning.Text = "*Campo numérico";
+                            else
+                            {
+                                if (cbCriterio.SelectedItem.ToString() == "Mayor a")
+                                    operador = '>';
+                                else if (cbCriterio.SelectedItem.ToString() == "Menor a")
+                                    operador = '<';
+                                else
+                                    operador = '=';
+
+                                lista = baseDatos.FiltrarPrecio(operador, txtFiltro.Text);
+                                funcion.cargarArticulosFiltrados(dgvArticulos, lista);
+                            }
+
+                        }
+                        else
+                        {
+                            warning.Text = "*Campo obligatorio";
+                        }
+                        break;
+                    case "Marca":
+                        lista = baseDatos.FiltrarFrase(cbCriterio.SelectedItem.ToString(), "M.Descripcion");
+                        funcion.cargarArticulosFiltrados(dgvArticulos, lista);
+                        break;
+                    case "Categoría":
+                        lista = baseDatos.FiltrarFrase(cbCriterio.SelectedItem.ToString(), "C.Descripcion");
+                        funcion.cargarArticulosFiltrados(dgvArticulos, lista);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

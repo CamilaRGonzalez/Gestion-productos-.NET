@@ -43,6 +43,7 @@ namespace Gestión_de_artículos_app
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
+            this.warning = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@ namespace Gestión_de_artículos_app
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
-            this.dgvArticulos.Size = new System.Drawing.Size(512, 289);
+            this.dgvArticulos.Size = new System.Drawing.Size(512, 302);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
@@ -91,7 +92,7 @@ namespace Gestión_de_artículos_app
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(5, 306);
+            this.btnDetalle.Location = new System.Drawing.Point(5, 320);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(103, 30);
             this.btnDetalle.TabIndex = 4;
@@ -117,6 +118,7 @@ namespace Gestión_de_artículos_app
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 21);
             this.cbCampo.TabIndex = 6;
+            this.cbCampo.SelectedIndexChanged += new System.EventHandler(this.cbCampo_SelectedIndexChanged);
             // 
             // lbCampo
             // 
@@ -142,7 +144,7 @@ namespace Gestión_de_artículos_app
             // 
             this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(817, 209);
+            this.cbCriterio.Location = new System.Drawing.Point(818, 209);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 21);
             this.cbCriterio.TabIndex = 9;
@@ -151,7 +153,7 @@ namespace Gestión_de_artículos_app
             // 
             this.lbFiltro.AutoSize = true;
             this.lbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFiltro.Location = new System.Drawing.Point(814, 233);
+            this.lbFiltro.Location = new System.Drawing.Point(815, 233);
             this.lbFiltro.Name = "lbFiltro";
             this.lbFiltro.Size = new System.Drawing.Size(40, 15);
             this.lbFiltro.TabIndex = 10;
@@ -166,27 +168,38 @@ namespace Gestión_de_artículos_app
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(817, 277);
+            this.btnBuscar.Location = new System.Drawing.Point(817, 292);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(67, 22);
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // pbxImagen
             // 
             this.pbxImagen.Location = new System.Drawing.Point(5, 12);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(271, 288);
+            this.pbxImagen.Size = new System.Drawing.Size(271, 302);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen.TabIndex = 13;
             this.pbxImagen.TabStop = false;
+            // 
+            // warning
+            // 
+            this.warning.AutoSize = true;
+            this.warning.ForeColor = System.Drawing.Color.Red;
+            this.warning.Location = new System.Drawing.Point(821, 275);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(0, 13);
+            this.warning.TabIndex = 14;
             // 
             // adminArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 350);
+            this.ClientSize = new System.Drawing.Size(957, 359);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.pbxImagen);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
@@ -227,6 +240,7 @@ namespace Gestión_de_artículos_app
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.PictureBox pbxImagen;
+        private System.Windows.Forms.Label warning;
     }
 }
 
